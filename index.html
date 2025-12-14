@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital care</title>
+    <!-- <link href="./output.css" rel="stylesheet">  -->
+         <script src="https://cdn.tailwindcss.com/3.3.3"></script> 
+</head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" 
+     referrerpolicy="no-referrer"/>
+     
+<script>
+    tailwind.config={
+        theme:{
+            extend:{
+                colors:{
+                    primary:"#09544f",
+                    secondary:"#eaf2ed",
+                },
+            },
+        },
+    };
+</script>
+
+<body class="h-screen">
+    <header class="bg-white sticky top-0 shadow-md">
+        <div class="container mx-auto px-2 py-4">
+             <div class="flex items-center justify-between gap-5 text-semibold">
+                <!-- logo -->
+               <a href="#" class="text-xl text-primary font-semibold">
+                Hospital Care
+                </a>
+
+               <!-- nav-bar -->
+               <nav class="sm:flex items-center gap-4 hidden">
+                   <a href="#" class="text-shadow-gray-900  font-semibold  md:text-md  hover:text-orange-400 transition duration-300">Home</a>
+                   <a href="#" class="text-shadow-gray-900  font-semibold  md:text-md  hover:text-orange-400 transition duration-300">Services</a>
+                  <a href="#" class="text-shadow-gray-900 font-semibold   md:text-md  hover:text-orange-400 transition duration-300">About us</a>
+                   <a href="#" class="text-shadow-gray-900  font-semibold  md:text-md   hover:text-orange-400 transition duration-300">Doctors</a>
+             </nav>
+             <!-- icons -->
+              <div class="flex items-center gap-3 text-lg ">
+                <button class="hover:text-orange-400 text-gray-700">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <button class="hover:text-orange-400 text-gray-700 ">
+                    <i class="fas fa-moon"></i>
+                </button> 
+                <button class="hover:text-orange-400 md:hidden text-gray-700 ">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+              </div>
+        </div>
+    </header>
+    
+
+    <!-- hero section -->
+    <section class="h-full bg-secondary">
+<H3>hero section</H3>
+    </section>
+    <!-- feature section -->
+     <section class="h-full">
+        <h3>feature section</h3>
+     </section>
+
+     <!-- best doctors -->
+      <section class="h-full bg-gray-200">
+        <h3>best doctors</h3>
+      </section>
+    
+</body>
+</html>
