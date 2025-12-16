@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HospitalCare – Admin Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Layout Wrapper -->
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white border-r hidden md:flex flex-col">
+        <div class="p-6 text-2xl font-bold text-indigo-600">HospitalCare</div>
+        <nav class="flex-1 px-4 space-y-2">
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg bg-indigo-50 text-indigo-600 font-medium"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Admins</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Doctors</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Receptionists</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Patients</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Departments</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Billing & Finance</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Reports</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >System Settings</a
+          >
+        </nav>
+        <div class="p-4 border-t">
+          <button
+            class="w-full text-left p-3 rounded-lg hover:bg-red-50 text-red-500"
+          >
+            Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-full max-w-md">
+            <input
+              type="text"
+              placeholder="Search users, reports..."
+              class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="relative">
+              <span
+                class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1"
+                >3</span
+              >
+              🔔
+            </button>
+            <span class="text-sm text-gray-600">Admin</span>
+            <img
+              src="https://i.pravatar.cc/40?img=12"
+              class="w-10 h-10 rounded-full"
+            />
+          </div>
+        </div>
+
+        <!-- Hero Card -->
+        <div
+          class="bg-indigo-600 text-white rounded-2xl p-6 mb-6 flex flex-col md:flex-row justify-between"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold">Hospital Overview</h2>
+            <p class="text-indigo-100 mt-2">
+              Monitor staff, patients, revenue & system performance
+            </p>
+          </div>
+          <div class="flex gap-3 mt-4 md:mt-0">
+            <button class="bg-black px-6 py-2 rounded-full">Add Doctor</button>
+            <button class="bg-white text-black px-6 py-2 rounded-full">
+              Add User
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Total Patients</p>
+            <h3 class="text-3xl font-bold mt-2">4,580</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Doctors</p>
+            <h3 class="text-3xl font-bold mt-2">85</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Staff</p>
+            <h3 class="text-3xl font-bold mt-2">120</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Monthly Revenue</p>
+            <h3 class="text-3xl font-bold mt-2">₹ 12.4L</h3>
+          </div>
+        </div>
+
+        <!-- Two Column Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Recent Users -->
+          <div class="lg:col-span-2 bg-white rounded-xl shadow-sm p-6">
+            <div class="flex justify-between mb-4">
+              <h3 class="text-lg font-semibold">Recent Users</h3>
+              <a href="#" class="text-indigo-600 text-sm">Manage</a>
+            </div>
+            <table class="w-full text-left text-sm">
+              <thead class="text-gray-500 border-b">
+                <tr>
+                  <th class="py-2">Name</th>
+                  <th>Role</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="py-3">Dr. Anil Shrestha</td>
+                  <td>Doctor</td>
+                  <td>
+                    <span
+                      class="px-3 py-1 rounded-full bg-green-100 text-green-600"
+                      >Active</span
+                    >
+                  </td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-3">Sita Rai</td>
+                  <td>Receptionist</td>
+                  <td>
+                    <span
+                      class="px-3 py-1 rounded-full bg-green-100 text-green-600"
+                      >Active</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3">Ramesh Karki</td>
+                  <td>Patient</td>
+                  <td>
+                    <span
+                      class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-600"
+                      >Pending</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- System Status -->
+          <div class="bg-white rounded-xl shadow-sm p-6">
+            <h3 class="text-lg font-semibold mb-4">System Status</h3>
+            <ul class="space-y-4 text-sm">
+              <li class="flex justify-between">
+                <span>Server Status</span>
+                <span class="text-green-600 font-medium">Online</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Backup</span>
+                <span class="text-green-600 font-medium">Up to date</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Pending Tickets</span>
+                <span class="text-red-600 font-medium">5</span>
+              </li>
+              <li class="flex justify-between">
+                <span>System Version</span>
+                <span class="font-medium">v2.1.0</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

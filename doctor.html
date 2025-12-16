@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HospitalCare – Doctor Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white border-r hidden md:flex flex-col">
+        <div class="p-6 text-2xl font-bold text-indigo-600">HospitalCare</div>
+        <nav class="flex-1 px-4 space-y-2">
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg bg-indigo-50 text-indigo-600 font-medium"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >My Appointments</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >My Patients</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Prescriptions</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Lab Reports</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Schedule</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Profile</a
+          >
+        </nav>
+        <div class="p-4 border-t">
+          <button
+            class="w-full text-left p-3 rounded-lg hover:bg-red-50 text-red-500"
+          >
+            Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between mb-6">
+          <h1 class="text-xl font-semibold">Doctor Dashboard</h1>
+          <div class="flex items-center gap-4">
+            <button>🔔</button>
+            <span class="text-sm">Dr. A. Shrestha</span>
+            <img src="https://i.pravatar.cc/40?img=32" class="rounded-full" />
+          </div>
+        </div>
+
+        <!-- Welcome Card -->
+        <div
+          class="bg-indigo-600 text-white rounded-2xl p-6 mb-6 flex justify-between items-center"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold">Good Morning, Doctor 👋</h2>
+            <p class="text-indigo-100">You have 8 appointments today</p>
+          </div>
+          <button class="bg-black px-6 py-2 rounded-full">View Schedule</button>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Today Appointments</p>
+            <h3 class="text-3xl font-bold">8</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Total Patients</p>
+            <h3 class="text-3xl font-bold">1,245</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Pending Reports</p>
+            <h3 class="text-3xl font-bold">6</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Prescriptions</p>
+            <h3 class="text-3xl font-bold">320</h3>
+          </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Appointments -->
+          <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm">
+            <div class="flex justify-between mb-4">
+              <h3 class="text-lg font-semibold">Today's Appointments</h3>
+              <a href="#" class="text-indigo-600 text-sm">See all</a>
+            </div>
+            <table class="w-full text-sm">
+              <thead class="border-b text-gray-500">
+                <tr>
+                  <th class="py-2">Patient</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="py-3">Suman KC</td>
+                  <td>10:00 AM</td>
+                  <td>
+                    <span
+                      class="bg-green-100 text-green-600 px-3 py-1 rounded-full"
+                      >Confirmed</span
+                    >
+                  </td>
+                  <td><button class="text-indigo-600">View</button></td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-3">Rita Thapa</td>
+                  <td>11:30 AM</td>
+                  <td>
+                    <span
+                      class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full"
+                      >Waiting</span
+                    >
+                  </td>
+                  <td><button class="text-indigo-600">View</button></td>
+                </tr>
+                <tr>
+                  <td class="py-3">Bikash Rai</td>
+                  <td>01:00 PM</td>
+                  <td>
+                    <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full"
+                      >Cancelled</span
+                    >
+                  </td>
+                  <td><button class="text-indigo-600">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="text-lg font-semibold mb-4">Quick Actions</h3>
+            <div class="space-y-3">
+              <button class="w-full bg-indigo-600 text-white py-2 rounded-lg">
+                Add Prescription
+              </button>
+              <button class="w-full bg-gray-100 py-2 rounded-lg">
+                View Lab Reports
+              </button>
+              <button class="w-full bg-gray-100 py-2 rounded-lg">
+                Patient History
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
