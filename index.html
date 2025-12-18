@@ -1,192 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hospital care</title>
-         <script src="https://cdn.tailwindcss.com/3.3.3"></script> 
-</head>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" 
-     referrerpolicy="no-referrer"/>
-     
-<script>
-    tailwind.config={
-        theme:{
-            extend:{
-                colors:{
-                    primary:"#09544f",
-                    secondary:"#eaf2ed",
-                },
-            },
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#09544f",
+            secondary: "#eaf2ed",
+          },
         },
+      },
     };
-</script>
+  </script>
 
-<body class="h-screen">
- <!-- Header / Navbar -->
-<header class="bg-white sticky top-0 z-50 shadow-lg">
-  <div class="container mx-auto px-6 py-3">
-    <div class="flex items-center justify-between">
+  <body class="h-screen">
+    <!-- Header / Navbar -->
+    <header class="bg-white sticky top-0 z-10 shadow-lg">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="#"
+            class="flex items-center gap-2 text-xl font-bold text-primary"
+          >
+            <img src="asset/images/logo.jpeg" class="h-10 w-5 object-cover" />
+            Hospital Care
+          </a>
 
-      <!-- Logo -->
-      <a href="#" class="flex items-center gap-2 text-xl font-bold text-primary">
-        <img src="asset/images/logo.jpeg" class="h-10 w-5 object-cover"> Hospital Care
-      </a>
+          <!-- Navigation -->
+          <nav
+            class="hidden sm:flex items-center gap-6 font-semibold text-gray-700"
+          >
+            <a href="#" class="hover:text-orange-400 duration-300 flex">Home</a>
+            <a href="#" class="hover:text-orange-400 duration-300 flex"
+              >Services</a
+            >
+            <a href="#" class="hover:text-orange-400 duration-300 flex"
+              >About Us</a
+            >
+            <a href="#" class="hover:text-orange-400 duration-300 flex"
+              >Doctors</a
+            >
+            <a href="#" class="hover:text-orange-400 duration-300 flex"
+              >Departments</a
+            >
+          </nav>
 
-      <!-- Navigation -->
-      <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-700">
-        <a href="#" class="hover:text-orange-400  duration-300">Home</a>
-        <a href="#" class="hover:text-orange-400  duration-300">Services</a>
-        <a href="#" class="hover:text-orange-400  duration-300">About Us</a>
-        <a href="#" class="hover:text-orange-400  duration-300">Doctors</a>
-        <a href="#" class="hover:text-orange-400  duration-300">Departments</a>
-      </nav>
+          <!-- Right Actions -->
+          <div class="flex items-center gap-4">
+            <!-- User -->
+            <button class="text-gray-600 hover:text-orange-400 duration-300">
+              <i class="fa-regular fa-user"></i>
+            </button>
 
-      <!-- Right Actions -->
-      <div class="flex items-center gap-4">
-        <!-- User -->
-        <button class="text-gray-600 hover:text-orange-400  duration-300">
-          <i class="fa-regular fa-user"></i>
-        </button>
+            <!-- Dark Mode -->
+            <button class="text-gray-600 hover:text-orange-400 duration-300">
+              <i class="fa-regular fa-moon"></i>
+            </button>
 
-        <!-- Dark Mode -->
-        <button class="text-gray-600 hover:text-orange-400  duration-300">
-          <i class="fa-regular fa-moon"></i>
-        </button>
+            <!-- Appointment Button -->
+            <a
+              href="#"
+              class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full hover:bg-orange-400 duration-300"
+            >
+              <i class="fa-regular fa-calendar-days"></i>
+              Appointment
+            </a>
 
-        <!-- Appointment Button -->
-        <a href="#" class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full hover:bg-orange-400  duration-300">
-          <i class="fa-regular fa-calendar-days"></i>
-          Appointment
-        </a>
-
-        <!-- Mobile Menu -->
-        <button class="md:hidden text-gray-600 hover:text-orange-400  duration-300 text-xl">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</header>
-
-  <!-- Hero Section -->
-<section class="bg-secondary">
-  <div class="container mx-auto px-6 lg:px-10 py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-
-      <!-- Text Content -->
-      <div>
-        <h1 class="text-4xl lg:text-5xl font-bold text-primary leading-tight">
-          Get the Care you <br />Need & Faster.
-        </h1>
-        <p class="mt-5 text-gray-600 max-w-xl">
-          Discover the heart behind our mental health platform. At our core,
-          we are a compassionate community of experts dedicated to guiding.
-        </p>
-
-        <!-- Features -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
-          <p class="text-gray-700 flex items-center">
-            <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
-            A world of comprehensive care
-          </p>
-          <p class="text-gray-700 flex items-center">
-            <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
-            Warm & welcoming environment
-          </p>
-          <p class="text-gray-700 flex items-center">
-            <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
-            Patient‑centered care
-          </p>
-          <p class="text-gray-700 flex items-center">
-            <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
-            Cutting‑edge technology
-          </p>
-        </div>
-
-        <!-- CTA -->
-        <div class="flex flex-col sm:flex-row sm:items-center gap-6 mt-8">
-          <button class="flex items-center gap-3 px-8 py-3 bg-orange-400 hover:bg-orange-500 hover:scale-105 transition-all duration-300 text-white font-bold rounded-full shadow-md">
-
-          <i class="fa-solid fa-chevron-right text-gray-700 bg-white w-8 h-8 flex items-center justify-center rounded-full mr-2"></i> Appointment
-          </button>
-          <div>
-            <p class="text-sm text-gray-500">Emergency Number</p>
-            <p class="text-md font-semibold text-orange-500">+1‑938‑740‑7555</p>
+            <!-- Mobile Menu -->
+            <button
+              class="md:hidden text-gray-600 hover:text-orange-400 duration-300 text-xl"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
           </div>
         </div>
       </div>
+    </header>
 
-      <!-- Image -->
-      <div class="relative">
-        <div class="absolute inset-0 bg-white rounded-3xl -z-10"></div>
-        <img
-          src="asset/images/hero.avif"
-          alt="Doctor consulting patient"
-          class="w-full max-h-[520px] object-cover rounded-3xl"
-        />
+    <!-- Hero Section -->
+    <section class="bg-secondary">
+      <div class="container mx-auto px-6 lg:px-10 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+          <!-- Text Content -->
+          <div>
+            <h1
+              class="text-4xl lg:text-5xl font-bold text-primary leading-tight"
+            >
+              Get the Care you <br />Need & Faster.
+            </h1>
+            <p class="mt-5 text-gray-600 max-w-xl">
+              Discover the heart behind our mental health platform. At our core,
+              we are a compassionate community of experts dedicated to guiding.
+            </p>
+
+            <!-- Features -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+              <p class="text-gray-700 flex items-center">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
+                A world of comprehensive care
+              </p>
+              <p class="text-gray-700 flex items-center">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
+                Warm & welcoming environment
+              </p>
+              <p class="text-gray-700 flex items-center">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
+                Patient‑centered care
+              </p>
+              <p class="text-gray-700 flex items-center">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i>
+                Cutting‑edge technology
+              </p>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex flex-col sm:flex-row sm:items-center gap-6 mt-8">
+              <button
+                class="flex items-center gap-3 px-8 py-3 bg-orange-400 hover:bg-orange-500 hover:scale-105 transition-all duration-300 text-white font-bold rounded-full shadow-md"
+              >
+                <i
+                  class="fa-solid fa-chevron-right text-gray-700 bg-white w-8 h-8 flex items-center justify-center rounded-full mr-2"
+                ></i>
+                Appointment
+              </button>
+              <div>
+                <p class="text-sm text-gray-500">Emergency Number</p>
+                <p class="text-md font-semibold text-orange-500">
+                  +1‑938‑740‑7555
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="relative">
+            <div class="absolute inset-0 bg-white rounded-3xl -z-10"></div>
+            <img
+              src="asset/images/hero.avif"
+              alt="Doctor consulting patient"
+              class="w-full max-h-[520px] object-cover rounded-3xl"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-    
+    </section>
+
     <!-- feature section -->
-   <section class="bg-white py-12 md:ml-20 md:mr-20">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section class="bg-white py-12 md:ml-20 md:mr-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-[#fff1d6] p-6 rounded-xl shadow-lg flex flex-col items-start gap-4 hover:scale-105 hover:pointer-cursor transition duration-300"
+          >
+            <div class="bg-white p-4 rounded-full">
+              <i class="fa-solid fa-stethoscope text-orange-400 text-2xl"></i>
+            </div>
+            <h2 class="text-gray-800 font-bold text-lg">Find a Doctor</h2>
+            <p class="text-gray-600 text-sm text-justify">
+              Our medical center is dedicated to providing excellent care. We
+              offer a broad range from preventive care to routine checkups.
+            </p>
+            <a
+              href="#"
+              class="text-orange-400 font-semibold mt-auto flex items-center gap-1"
+            >
+              View All Doctors <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
 
-      <!-- Card 1 -->
-      <div class="bg-[#fff1d6] p-6 rounded-xl shadow-md flex flex-col items-start gap-4">
-        <div class="bg-white p-4 rounded-full">
-          <i class="fa-solid fa-stethoscope text-orange-400 text-2xl"></i>
+          <!-- Card 2 -->
+          <div
+            class="bg-[#ffe9e6] p-6 rounded-xl shadow-md flex flex-col items-start gap-4 hover:scale-105 hover:pointer-cursor transition duration-300"
+          >
+            <div class="bg-white p-4 rounded-full">
+              <i class="fa-solid fa-phone text-orange-400 text-2xl"></i>
+            </div>
+            <h2 class="text-gray-800 font-bold text-lg">24/7 Hours Support</h2>
+            <p class="text-gray-600 text-sm text-justify">
+              We are committed to delivering exceptional healthcare services
+              tailored to meet the needs of every patient.
+            </p>
+            <a
+              href="#"
+              class="text-orange-400 font-semibold mt-auto flex items-center gap-1"
+            >
+              Contact Us <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-[#e6f0ff] p-6 rounded-xl shadow-md flex flex-col items-start gap-4 hover:scale-105 hover:pointer-cursor transition duration-300"
+          >
+            <div
+              class="bg-white p-4 rounded-full hover:pointer-cursor transition duration-300"
+            >
+              <i
+                class="fa-solid fa-calendar-check text-orange-400 text-2xl"
+              ></i>
+            </div>
+            <h2 class="text-gray-800 font-bold text-lg">Book an Appointment</h2>
+            <p class="text-gray-600 text-sm text-justify">
+              With a focus on compassionate personalized care, patients feel
+              respected and well informed about their health.
+            </p>
+            <a
+              href="#"
+              class="text-orange-400 font-semibold mt-auto flex items-center gap-1"
+            >
+              Request An Appointment <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <h2 class="text-gray-800 font-bold text-lg">Find a Doctor</h2>
-        <p class="text-gray-600 text-sm text-justify">
-          Our medical center is dedicated to providing excellent care. We offer a broad range from preventive care to routine checkups.
-        </p>
-        <a href="#" class="text-orange-400 font-semibold mt-auto flex items-center gap-1">
-          View All Doctors <i class="fa-solid fa-arrow-right"></i>
-        </a>
       </div>
+    </section>
 
-      <!-- Card 2 -->
-      <div class="bg-[#ffe9e6] p-6 rounded-xl shadow-md flex flex-col items-start gap-4">
-        <div class="bg-white p-4 rounded-full">
-          <i class="fa-solid fa-phone text-orange-400 text-2xl"></i>
+    <!-- Services -->
+    <section class="bg-[#ffffff] py-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- Image -->
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="asset/images/hero.avif"
+              alt="doctor"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+
+          <!-- Text Content -->
+          <div class="bg-[#f5fefe] rounded-xl p-6 md:p-10">
+            <h2 class="text-orange-400 font-semibold mb-2 text-sm">
+              Who We Are
+            </h2>
+            <h1 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+              We Provide Finnest Patient's <br />Care & Amenities
+            </h1>
+            <p class="text-gray-600 mb-6 text-justify">
+              Embrace a world of comprehensive healthcare where your well-being
+              takes center stage. At Meca, we're dedicated to providing...
+            </p>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <p class="flex items-center text-gray-700">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i
+                >Patient-Centered Care
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i
+                >Comprehensive Care
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i
+                >Warm & Welcoming Environment
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i
+                >Cutting-Edge Technology
+              </p>
+              <p class="flex items-center text-gray-700">
+                <i class="fa-solid fa-check-double text-orange-400 mr-2"></i
+                >Specialty Medicine with Compassion
+              </p>
+            </div>
+
+            <!-- Info Blocks -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div class="flex items-start gap-3">
+                <div class="p-3 bg-orange-100 rounded-full">
+                  <i class="fa-solid fa-user-check text-orange-500"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">
+                    Professional & Trustworthy
+                  </h3>
+                  <p class="text-gray-600 text-sm">
+                    Good medical professionals uphold high personal and
+                    professional standards of conduct.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="p-3 bg-orange-100 rounded-full">
+                  <i class="fa-solid fa-heart text-orange-500"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900">Warm & Reassuring</h3>
+                  <p class="text-gray-600 text-sm">
+                    We found that having a doctor who is warm and reassuring
+                    actually improves your health.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Buttons & Emergency Number -->
+            <div
+              class="flex flex-col sm:gap-4 gap-4 sm:items-center md:flex-row"
+            >
+              <!-- Explore Button -->
+              <button
+                class="bg-orange-400 hover:bg-orange-500 text-white font-semibold py-2 px-6 rounded-lg transition flex items-center gap-2"
+              >
+                Explore More <i class="fa-solid fa-arrow-right"></i>
+              </button>
+
+              <!-- Book Appointment Link -->
+              <a
+                href="#"
+                class="text-orange-400 font-semibold hover:underline flex items-center gap-2"
+              >
+                Book An Appointment
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+
+              <!-- Emergency Number -->
+              <p class="mt-4 sm:mt-0 text-gray-700">
+                Emergency Number:
+                <span class="text-orange-500 font-bold">+1-938-740-7555</span>
+              </p>
+            </div>
+          </div>
         </div>
-        <h2 class="text-gray-800 font-bold text-lg">24/7 Hours Support</h2>
-        <p class="text-gray-600 text-sm text-justify">
-          We are committed to delivering exceptional healthcare services tailored to meet the needs of every patient.
-        </p>
-        <a href="#" class="text-orange-400 font-semibold mt-auto flex items-center gap-1">
-          Contact Us <i class="fa-solid fa-arrow-right"></i>
-        </a>
       </div>
+    </section>
 
-      <!-- Card 3 -->
-      <div class="bg-[#e6f0ff] p-6 rounded-xl shadow-md flex flex-col items-start gap-4">
-        <div class="bg-white p-4 rounded-full">
-          <i class="fa-solid fa-calendar-check text-orange-400 text-2xl"></i>
+    <section class="py-12 bg-gray-50">
+      <div class="container mx-auto px-5 text-center">
+        <!-- Section Header -->
+        <p class="text-sm text-orange-400 font-semibold">Our Services</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+          We Serve In Different Areas For <br />
+          <span class="text-primary">Our Patients</span>
+        </h2>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Service Card -->
+          <div
+            class="bg-yellow-100 rounded-xl p-6 hover:shadow-lg transition cursor-pointer"
+          >
+            <div class="text-4xl mb-4 text-orange-400">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">
+              Medicine & Nephrology
+            </h3>
+            <p class="text-gray-600 text-sm mb-3">
+              25+ Doctors are available under this department who serve.
+            </p>
+            <a
+              href="#"
+              class="text-orange-400 font-semibold hover:underline flex items-center gap-1"
+            >
+              Read More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div
+            class="bg-blue-100 rounded-xl p-6 hover:shadow-lg transition cursor-pointer"
+          >
+            <div class="text-4xl mb-4 text-orange-400">
+              <i class="fa-solid fa-kidneys"></i>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Nephrology</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              25+ Doctors are available under this department who serve.
+            </p>
+            <a
+              href="#"
+              class="text-orange-400 font-semibold hover:underline flex items-center gap-1"
+            >
+              Read More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div
+            class="bg-red-100 rounded-xl p-6 hover:shadow-lg transition cursor-pointer"
+          >
+            <div class="text-4xl mb-4 text-orange-400 items-start">
+              <i class="fa-solid fa-lungs"></i>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Liver Surgery</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              25+ Doctors are available under this department who serve.
+            </p>
+            <a
+              href="#"
+              class="text-orange-400 font-semibold hover:underline flex items-center gap-1"
+            >
+              Read More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div
+            class="bg-purple-100 rounded-xl p-6 hover:shadow-lg transition cursor-pointer"
+          >
+            <div class="text-4xl mb-4 text-orange-400">
+              <i class="fa-solid fa-radiation"></i>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-2">Radiation Therapy</h3>
+            <p class="text-gray-600 text-sm mb-3">
+              25+ Doctors are available under this department who serve.
+            </p>
+            <a
+              href="#"
+              class="text-orange-400 font-semibold hover:underline flex items-center gap-1"
+            >
+              Read More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <h2 class="text-gray-800 font-bold text-lg">Book an Appointment</h2>
-        <p class="text-gray-600 text-sm text-justify">
-          With a focus on compassionate personalized care, patients feel respected and well informed about their health.
-        </p>
-        <a href="#" class="text-orange-400 font-semibold mt-auto flex items-center gap-1">
-          Request An Appointment <i class="fa-solid fa-arrow-right"></i>
-        </a>
+
+        <div class="mt-8">
+          <button
+            class="bg-orange-400 hover:bg-orange-500 text-white font-semibold py-2 px-6 rounded-lg transition"
+          >
+            More Services <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
       </div>
-
-    </div>
-  </div>
-</section>
-
-
-     <!-- best doctors -->
-      <section class="h-full bg-gray-200">
-        <h3>best doctors</h3>
-      </section>
-    
-</body>
+    </section>
+  </body>
 </html>
