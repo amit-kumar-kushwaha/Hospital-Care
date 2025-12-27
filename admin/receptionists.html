@@ -88,12 +88,12 @@
           </div>
         </div>
 
-        <!-- Main -->
-         <main class="flex-1 p-6">
+     
+         <div class="flex-1 p-6">
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-2xl font-semibold">Receptionists</h2>
       <button class="bg-indigo-600 text-white px-5 py-2 rounded-full">
-        + Add Receptionist
+        <a href="addReceptionist.html">+ Add Receptionist  </a>
       </button>
     </div>
 
@@ -101,20 +101,30 @@
       <table class="w-full text-sm">
         <thead class="bg-gray-50 text-gray-500">
           <tr>
+            <th class="p-4 text-left">S.no.</th>
             <th class="p-4 text-left">Name</th>
             <th class="p-4 text-left">Phone</th>
+            <th class="p-4 text-left">Email</th>
+            <th class="p-4 text-left">Gender</th>
+            <th class="p-4 text-left">Address</th>
             <th class="p-4 text-left">Shift</th>
             <th class="p-4 text-left">Status</th>
+            <th class="p-4 text-left">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr class="border-t">
+            <td class="p-4">1</td>
             <td class="p-4">Sita Rai</td>
             <td class="p-4">9811111111</td>
+            <td class="p-4">sita@gmail.com</td>            
+            <td class="p-4">Female</td>
+            <td class="p-4">Kathmandu</td>
             <td class="p-4">Morning</td>
             <td class="p-4">
               <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full">Active</span>
             </td>
+            <td class="p-4 text-indigo-600 cursor-pointer">View</td>
           </tr>
         </tbody>
       </table>

@@ -14,20 +14,18 @@
       <aside class="w-64 bg-white border-r hidden md:flex flex-col">
         <div class="p-6 text-2xl font-bold text-indigo-600">HospitalCare</div>
         <nav class="flex-1 px-4 space-y-2">
-          <a
-            href="admin.html"
-            class="flex items-center gap-3 p-3 rounded-lg "
+          <a href="admin.html" class="flex items-center gap-3 p-3 rounded-lg"
             >Dashboard</a
           >
-        
+
           <a
             href="doctors.html"
-            class="flex items-center gap-3 p-3 rounded-lg  hover:bg-gray-100"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
             >Doctors</a
           >
           <a
             href="receptionists.html"
-            class="flex items-center gap-3 p-3 rounded-lg  hover:bg-gray-100"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
             >Receptionists</a
           >
           <a
@@ -50,7 +48,6 @@
             class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
             >Reports</a
           >
-         
         </nav>
         <div class="p-4 border-t">
           <button
@@ -88,36 +85,48 @@
           </div>
         </div>
 
-  <div class="flex-1 p-6">
-    <div class="flex justify-between items-center mb-6">
-      <h2 class="text-2xl font-semibold">Departments</h2>
-      <button class="bg-indigo-600 text-white px-5 py-2 rounded-full">
-        <a href="addDepartment.html">+ Add Department </a> 
-      </button>
-    </div>
+        <div class="flex-1 p-6">
+          <div class="flex items-center mb-6">
+            <h2 class="text-2xl font-semibold">Add Department</h2>
+          </div>
+          <div class="flex items-center mb-6 m-20>
 
-    <div class="bg-white rounded-xl shadow-sm overflow-x-auto">
-      <table class="w-full text-sm">
-        <thead class="bg-gray-50 text-gray-500">
-          <tr>
-            <th class="p-4 text-left">Department Name</th>
-            
-            <th class="p-4 text-left">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-t">
-            <td class="p-4">Cardiology</td>
-            
-            <td class="p-4">
-              <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full">Active</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
-        
+          <a href="" class="text-indigo-600 text-sm"
+            ><a href="departments.html">← Back to Departments</a></a
+          >
+        </div>
+
+        <!-- Form Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6 max-w-xl">
+          <form class="grid grid-cols-1 md:grid-cols-1 gap-6">
+            <!-- Department -->
+            <div>
+              <label class="text-sm text-gray-500">Department</label>
+              <input
+                type="text"
+                placeholder="Cardiology"
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+                required
+              />
+
+              <!-- Buttons -->
+            <div class="md:col-span-2 flex justify-end gap-3 pt-4">
+              <button
+                type="reset"
+                class="px-6 py-2 rounded-full border hover:bg-gray-100"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="px-8 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700"
+              >
+                Save Department
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
     </div>
   </body>
 </html>
