@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HospitalCare – Patient Registration</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#09544f",
+              secondary: "#eaf2ed",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="min-h-screen font-sans bg-gradient-to-br from-[#eaf2ed] via-white to-[#dbeee9] relative overflow-hidden">
+    <!-- Background Image -->
+    <div
+      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3')] bg-cover bg-center"
+    ></div>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+
+    <!-- Page Content -->
+    <div class="relative z-10">
+      <!-- HEADER -->
+      <header class="bg-white sticky top-0 z-20 shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+          <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <a
+              href="#"
+              class="flex items-center gap-2 text-xl font-bold text-primary"
+            >
+              <img
+                src="asset/images/logo.jpeg"
+                class="h-10 w-5 object-cover"
+                alt="Logo"
+              />
+              Hospital Care
+            </a>
+
+            <!-- Navigation -->
+            <nav
+              class="hidden sm:flex items-center gap-6 font-semibold text-gray-700"
+            >
+              <a href="index.html" class="hover:text-orange-400">Home</a>
+              <a href="#" class="hover:text-orange-400">Services</a>
+              <a href="#" class="hover:text-orange-400">About Us</a>
+              <a href="#" class="hover:text-orange-400">Doctors</a>
+              <a href="#" class="hover:text-orange-400">Departments</a>
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-4">
+              <a
+                href="login.html"
+                class="text-gray-600 hover:text-orange-400"
+              >
+                <i class="fa-regular fa-user"></i>
+              </a>
+
+              <button class="text-gray-600 hover:text-orange-400">
+                <i class="fa-regular fa-moon"></i>
+              </button>
+
+              <a
+                href="#"
+                class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full hover:bg-orange-400"
+              >
+                <i class="fa-regular fa-calendar-days"></i>
+                Appointment
+              </a>
+
+              <button
+                class="md:hidden text-gray-600 hover:text-orange-400 text-xl"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- REGISTER SECTION -->
+     <section class="pb-20">
+         <div
+        class=" flex items-center justify-center p-4 pb-24"
+      >
+        <!-- Card -->
+        <div
+          class="bg-white/90 backdrop-blur-xl w-full max-w-5xl rounded-2xl shadow-2xl grid grid-cols-1 md:grid-cols-2 overflow-hidden"
+        >
+          <!-- Left Panel -->
+          <div
+            class="hidden md:flex flex-col justify-center bg-indigo-600 text-white p-10"
+          >
+            <h2 class="text-3xl font-bold mb-4">HospitalCare</h2>
+            <p class="text-indigo-100 mb-6">
+              Manage Admin, Doctor, Patient & Receptionist modules from one
+              secure platform.
+            </p>
+            <ul class="space-y-3 text-sm">
+              <li>✔ Secure login & role-based access</li>
+              <li>✔ Appointment & patient management</li>
+              <li>✔ Billing, reports & prescriptions</li>
+              <li>✔ Modern & responsive dashboard</li>
+            </ul>
+          </div>
+
+          <!-- Right Form -->
+          <div class="p-8">
+            <!-- Tabs -->
+            <div class="flex mb-6 border-b">
+              <a
+                href="login.html"
+                class="w-1/2 py-2 text-center text-gray-500"
+                >Login</a
+              >
+              <span
+                class="w-1/2 py-2 text-center font-medium border-b-2 border-indigo-600 text-indigo-600"
+                >Register</span
+              >
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-4">
+              <div>
+                <label class="block text-sm mb-1">Full Name</label>
+                <input
+                  type="text"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                  placeholder="Enter full name"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm mb-1">Date of Birth</label>
+                  <input
+                    type="date"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm mb-1">Gender</label>
+                  <select
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                  >
+                    <option>Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm mb-1">Mobile</label>
+                  <input
+                    type="tel"
+                    placeholder="98XXXXXXXX"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm mb-1">Email</label>
+                  <input
+                    type="email"
+                    placeholder="email@example.com"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm mb-1">Address</label>
+                <input
+                  type="text"
+                  placeholder="City, Street"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm mb-1">Select Doctor</label>
+                <select
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                >
+                  <option>Select doctor</option>
+                  <option>Dr. A. Shrestha (Physician)</option>
+                  <option>Dr. P. Rana (Cardiologist)</option>
+                  <option>Dr. S. Koirala (Orthopedic)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm mb-1">Reason for Visit</label>
+                <textarea
+                  rows="2"
+                  placeholder="Describe symptoms"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700"
+              >
+                Register Patient
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+     </section>
+    </div>
+  </body>
+</html>

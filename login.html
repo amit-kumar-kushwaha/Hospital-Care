@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HospitalCare – Login / Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#09544f",
+              secondary: "#eaf2ed",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="min-h-screen font-sans relative">
+    <!-- Background Image -->
+    <div
+      class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3')] bg-cover bg-center"
+    ></div>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+
+    <div class="relative z-10">
+      <header class="bg-white sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+          <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <a
+              href="#"
+              class="flex items-center gap-2 text-xl font-bold text-primary"
+            >
+              <img src="asset/images/logo.jpeg" class="h-10 w-5 object-cover" />
+              Hospital Care
+            </a>
+
+            <!-- Navigation -->
+            <nav
+              class="hidden sm:flex items-center gap-6 font-semibold text-gray-700"
+            >
+              <a
+                href="index.html"
+                class="hover:text-orange-400 duration-300 flex"
+                >Home</a
+              >
+              <a href="#" class="hover:text-orange-400 duration-300 flex"
+                >Services</a
+              >
+              <a href="#" class="hover:text-orange-400 duration-300 flex"
+                >About Us</a
+              >
+              <a href="#" class="hover:text-orange-400 duration-300 flex"
+                >Doctors</a
+              >
+              <a href="#" class="hover:text-orange-400 duration-300 flex"
+                >Departments</a
+              >
+            </nav>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-4">
+              <!-- User -->
+              <a
+                href="login.html"
+                class="text-gray-600 hover:text-orange-400 duration-300"
+              >
+                <i class="fa-regular fa-user"></i>
+              </a>
+
+              <!-- Dark Mode -->
+              <button class="text-gray-600 hover:text-orange-400 duration-300">
+                <i class="fa-regular fa-moon"></i>
+              </button>
+
+              <!-- Appointment Button -->
+              <a
+                href="#"
+                class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full hover:bg-orange-400 duration-300"
+              >
+                <i class="fa-regular fa-calendar-days"></i>
+                Appointment
+              </a>
+
+              <!-- Mobile Menu -->
+              <button
+                class="md:hidden text-gray-600 hover:text-orange-400 duration-300 text-xl"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="min-h-screen flex items-center justify-center p-4">
+        <!-- Card -->
+        <div
+          class="bg-white/90 backdrop-blur-xl w-full max-w-4xl rounded-2xl shadow-2xl grid grid-cols-1 md:grid-cols-2 overflow-hidden"
+        >
+          <!-- Left Section -->
+          <div
+            class="hidden md:flex flex-col justify-center bg-indigo-600 text-white p-10"
+          >
+            <h2 class="text-3xl font-bold mb-4">HospitalCare</h2>
+            <p class="text-indigo-100 mb-6">
+              Manage Admin, Doctor, Patient & Receptionist modules from one
+              secure platform.
+            </p>
+            <ul class="space-y-3 text-sm">
+              <li>✔ Secure login & role-based access</li>
+              <li>✔ Appointment & patient management</li>
+              <li>✔ Billing, reports & prescriptions</li>
+              <li>✔ Modern & responsive dashboard</li>
+            </ul>
+          </div>
+
+          <!-- Right Section -->
+          <div class="p-8">
+            <!-- Tabs -->
+            <div class="flex mb-6 border-b">
+              <button
+                class="w-1/2 py-2 font-medium border-b-2 border-indigo-600 text-indigo-600"
+              >
+                Login
+              </button>
+              <button class="w-1/2 py-2 text-gray-500">
+                <a href="./register.html">Register</a>
+              </button>
+            </div>
+
+            <!-- Login Form -->
+            <form class="space-y-4">
+              <div>
+                <label class="block text-sm mb-1">Email</label>
+                <input
+                  type="email"
+                  placeholder="email@example.com"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm mb-1">Password</label>
+                <input
+                  type="password"
+                  placeholder="********"
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm mb-1">Login As</label>
+                <select
+                  class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none"
+                >
+                  <option>Admin</option>
+                  <option>Doctor</option>
+                  <option>Receptionist</option>
+                  <option>Patient</option>
+                </select>
+              </div>
+
+              <div class="flex justify-between text-sm">
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" /> Remember me
+                </label>
+                <a href="#" class="text-indigo-600">Forgot password?</a>
+              </div>
+
+              <button
+                class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
