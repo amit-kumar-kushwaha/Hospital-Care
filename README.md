@@ -78,3 +78,7 @@ Form fields:
 ## Receptionist Dashboard Page
 
 ---
+index.html 
+->nav bar completed
+->hero sectio
+->feature section
