@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HospitalCare – Patient Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white border-r hidden md:flex flex-col">
+        <div class="p-6 text-2xl font-bold text-indigo-600">HospitalCare</div>
+        <nav class="flex-1 px-4 space-y-2">
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg bg-indigo-50 text-indigo-600 font-medium"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >My Appointments</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Medical Records</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Prescriptions</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Lab Reports</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Billing & Payments</a
+          >
+          <a
+            href="#"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Profile</a
+          >
+        </nav>
+
+        <div class="p-4 border-t">
+          <button
+            class="w-full text-left p-3 rounded-lg hover:bg-red-50 text-red-500"
+          >
+            Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between mb-6">
+          <h1 class="text-xl font-semibold">Patient Dashboard</h1>
+          <div class="flex items-center gap-4">
+            <button>🔔</button>
+            <span class="text-sm">Amit Sharma</span>
+            <img src="https://i.pravatar.cc/40?img=14" class="rounded-full" />
+          </div>
+        </div>
+
+        <!-- Welcome Card -->
+        <div
+          class="bg-indigo-600 text-white rounded-2xl p-6 mb-6 flex justify-between items-center"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold">Welcome Back 👋</h2>
+            <p class="text-indigo-100">Hope you are feeling better today</p>
+          </div>
+          <button class="bg-black px-6 py-2 rounded-full">
+            Book Appointment
+          </button>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Upcoming Appointments</p>
+            <h3 class="text-3xl font-bold">2</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Doctors Consulted</p>
+            <h3 class="text-3xl font-bold">5</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Active Prescriptions</p>
+            <h3 class="text-3xl font-bold">3</h3>
+          </div>
+          <div class="bg-white p-5 rounded-xl shadow-sm">
+            <p class="text-gray-500">Pending Bills</p>
+            <h3 class="text-3xl font-bold">1</h3>
+          </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <!-- Appointments -->
+          <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm">
+            <div class="flex justify-between mb-4">
+              <h3 class="text-lg font-semibold">Upcoming Appointments</h3>
+              <a href="#" class="text-indigo-600 text-sm">View all</a>
+            </div>
+            <table class="w-full text-sm">
+              <thead class="border-b text-gray-500">
+                <tr>
+                  <th class="py-2">Doctor</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="py-3">Dr. A. Shrestha</td>
+                  <td>20 Aug 2025</td>
+                  <td>10:00 AM</td>
+                  <td>
+                    <span
+                      class="bg-green-100 text-green-600 px-3 py-1 rounded-full"
+                      >Confirmed</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3">Dr. P. Rana</td>
+                  <td>25 Aug 2025</td>
+                  <td>01:30 PM</td>
+                  <td>
+                    <span
+                      class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full"
+                      >Waiting</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Health Summary -->
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="text-lg font-semibold mb-4">Health Summary</h3>
+            <ul class="space-y-3 text-sm">
+              <li class="flex justify-between">
+                <span>Blood Group</span><span class="font-medium">O+</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Allergies</span><span class="font-medium">None</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Last Visit</span
+                ><span class="font-medium">10 Aug 2025</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Primary Doctor</span
+                ><span class="font-medium">Dr. A. Shrestha</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HospitalCare – Admin Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Layout Wrapper -->
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white border-r hidden md:flex flex-col">
+        <div class="p-6 text-2xl font-bold text-indigo-600">HospitalCare</div>
+        <nav class="flex-1 px-4 space-y-2">
+          <a href="admin.html" class="flex items-center gap-3 p-3 rounded-lg"
+            >Dashboard</a
+          >
+
+          <a
+            href="doctors.html"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Doctors</a
+          >
+          <a
+            href="receptionists.html"
+            class="flex items-center gap-3 p-3 rounded-lg bg-indigo-50 text-indigo-600 font-medium hover:bg-gray-100"
+            >Receptionists</a
+          >
+          <a
+            href="patients.html"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Patients</a
+          >
+          <a
+            href="departments.html"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Departments</a
+          >
+          <a
+            href="billing.html"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Billing & Finance</a
+          >
+          <a
+            href="reports.html"
+            class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100"
+            >Reports</a
+          >
+        </nav>
+        <div class="p-4 border-t">
+          <button
+            class="w-full text-left p-3 rounded-lg hover:bg-red-50 text-red-500"
+          >
+            Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="w-full max-w-md">
+            <input
+              type="text"
+              placeholder="Search users, reports..."
+              class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            />
+          </div>
+          <div class="flex items-center gap-4">
+            <button class="relative">
+              <span
+                class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full px-1"
+                >3</span
+              >
+              🔔
+            </button>
+            <span class="text-sm text-gray-600">Admin</span>
+            <img
+              src="https://i.pravatar.cc/40?img=12"
+              class="w-10 h-10 rounded-full"
+            />
+          </div>
+        </div>
+
+        <div class="flex-1 p-6">
+          <div class="flex items-center mb-6">
+            <h2 class="text-2xl font-semibold">Add Receptionists</h2>
+          </div>
+          <div class="flex items-center mb-6 m-20>
+
+          <a href="" class="text-indigo-600 text-sm"
+            ><a href="receptionists.html">← Back to Receptionists</a></a
+          >
+        </div>
+
+        <!-- Form Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6 max-w-4xl">
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Full Name -->
+            <div>
+              <label class="text-sm text-gray-500">Full Name</label>
+              <input
+                type="text"
+                placeholder="Sita Rai"
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+                required
+              />
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label class="text-sm text-gray-500">Phone Number</label>
+              <input
+                type="text"
+                placeholder="9811111111"
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+                required
+              />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="text-sm text-gray-500">Email Address</label>
+              <input
+                type="email"
+                placeholder="reception@hospitalcare.com"
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+              />
+            </div>
+
+            <!-- Shift -->
+            <div>
+              <label class="text-sm text-gray-500">Shift</label>
+              <select
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+                required
+              >
+                <option value="">Select Shift</option>
+                <option>Morning</option>
+                <option>Evening</option>
+                <option>Night</option>
+              </select>
+            </div>
+
+            <!-- Gender -->
+            <div>
+              <label class="text-sm text-gray-500">Gender</label>
+              <select
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+              >
+                <option>Female</option>
+                <option>Male</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- Status -->
+            <div>
+              <label class="text-sm text-gray-500">Status</label>
+              <select
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+              >
+                <option>Active</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+
+            <!-- Address -->
+            <div class="md:col-span-2">
+              <label class="text-sm text-gray-500">Address</label>
+              <textarea
+                rows="3"
+                placeholder="Kathmandu, Nepal"
+                class="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-400"
+              ></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="md:col-span-2 flex justify-end gap-3 pt-4">
+              <button
+                type="reset"
+                class="px-6 py-2 rounded-full border hover:bg-gray-100"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="px-8 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-700"
+              >
+                Save Receptionist
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
