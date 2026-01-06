@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital care</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#09544f",
+            secondary: "#eaf2ed",
+          },
+        },
+      },
+    };
+  </script>
+
+  <body class="h-screen">
+    <!-- HEADER -->
+    <header class="bg-white sticky top-0 z-10 shadow-lg">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="#"
+            class="flex items-center gap-2 text-xl font-bold text-primary"
+          >
+            <img src="asset/images/logo.jpeg" class="h-10 w-5 object-cover" />
+            Hospital Care
+          </a>
+
+          <!-- Navigation -->
+          <nav
+            class="hidden sm:flex items-center gap-6 font-semibold text-gray-700"
+          >
+            <a href="index.html" class="hover:text-orange-400 duration-300 flex"
+              >Home</a
+            >
+            <a
+              href="services.html active"
+              class="hover:text-orange-400 duration-300 flex"
+              >Services</a
+            >
+            <a
+              href="aboutus.html"
+              class="hover:text-orange-400 duration-300 flex"
+              >About Us</a
+            >
+            <a
+              href="doctors.html"
+              class="hover:text-orange-400 duration-300 flex"
+              >Doctors</a
+            >
+            <a
+              href="departments.html"
+              class="hover:text-orange-400 duration-300 flex"
+              >Departments</a
+            >
+          </nav>
+
+          <!-- Right Actions -->
+          <div class="flex items-center gap-4">
+            <!-- User -->
+            <a
+              href="login.html"
+              class="text-gray-600 hover:text-orange-400 duration-300"
+            >
+              <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- Dark Mode -->
+            <button class="text-gray-600 hover:text-orange-400 duration-300">
+              <i class="fa-regular fa-moon"></i>
+            </button>
+
+            <!-- Appointment Button -->
+            <a
+              href="#"
+              class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full hover:bg-orange-400 duration-300"
+            >
+              <i class="fa-regular fa-calendar-days"></i>
+              Appointment
+            </a>
+
+            <!-- Mobile Menu -->
+            <button
+              class="md:hidden text-gray-600 hover:text-orange-400 duration-300 text-xl"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-5 text-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Healthcare Services
+        </h1>
+        <p class="text-gray-600 mb-10">
+          We provide comprehensive medical services with modern facilities.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+            <i
+              class="fa-solid fa-user-doctor text-orange-500 text-4xl mb-4"
+            ></i>
+            <h3 class="font-semibold mb-2">General Medicine</h3>
+            <p class="text-sm text-gray-600">Primary diagnosis & treatment.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+            <i
+              class="fa-solid fa-heart-pulse text-orange-500 text-4xl mb-4"
+            ></i>
+            <h3 class="font-semibold mb-2">Cardiology</h3>
+            <p class="text-sm text-gray-600">Advanced heart care services.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+            <i class="fa-solid fa-brain text-orange-500 text-4xl mb-4"></i>
+            <h3 class="font-semibold mb-2">Neurology</h3>
+            <p class="text-sm text-gray-600">Brain & nerve treatments.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg">
+            <i class="fa-solid fa-x-ray text-orange-500 text-4xl mb-4"></i>
+            <h3 class="font-semibold mb-2">Radiology</h3>
+            <p class="text-sm text-gray-600">MRI, CT Scan & X-Ray.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section
+      class="bg-gradient-to-r from-[#0f766e] to-[#134e4a] text-white pt-14"
+    >
+      <div class="max-w-7xl mx-auto px-5">
+        <!-- Top Info -->
+        <div class="grid md:grid-cols-3 gap-6 mb-14">
+          <div class="bg-white text-gray-800 rounded-xl p-6">
+            <h4 class="font-semibold mb-2">Doctors Timetable</h4>
+            <p class="text-sm text-gray-500 mb-3">
+              View doctors availability and book your appointment.
+            </p>
+            <a href="#" class="text-orange-500 text-sm font-medium">
+              View Timetable →
+            </a>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-xl p-6">
+            <h4 class="font-semibold mb-2">Our Benefits</h4>
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>✔ World class treatment</li>
+              <li>✔ Save time & money</li>
+              <li>✔ Feel like home services</li>
+            </ul>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-xl p-6">
+            <h4 class="font-semibold mb-2">Working Hours</h4>
+            <p class="text-sm text-gray-500">Monday – Friday: 08:00 - 18:00</p>
+            <p class="text-sm text-gray-500">Sunday: Closed</p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <footer>
+          <div
+            class="border-t border-white/20 py-6 flex flex-col md:flex-row justify-between text-sm"
+          >
+            <p>© Hospital Automanager. All Rights Reserved.</p>
+            <div class="flex gap-4">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>

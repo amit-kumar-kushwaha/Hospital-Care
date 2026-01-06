@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital care</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#09544f",
+            secondary: "#eaf2ed",
+          },
+        },
+      },
+    };
+  </script>
+
+  <body class="h-screen">
+     <!-- Header / Navbar -->
+    <header class="bg-white sticky top-0 z-10 shadow-lg">
+      <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a
+            href="#"
+            class="flex items-center gap-2 text-xl font-bold text-primary"
+          >
+            <img src="asset/images/logo.jpeg" class="h-10 w-5 object-cover" />
+            Hospital Care
+          </a>
+
+          <!-- Navigation -->
+          <nav
+            class="hidden sm:flex items-center gap-6 font-semibold text-gray-700"
+          >
+            <a href="index.html" class="hover:text-orange-400 duration-300 flex">Home</a>
+            <a href="services.html" class="hover:text-orange-400 duration-300 flex"
+              >Services</a
+            >
+            <a href="aboutus.html" class="hover:text-orange-400 duration-300 flex"
+              >About Us</a
+            >
+            <a href="doctors.html" class="hover:text-orange-400 duration-300 flex"
+              >Doctors</a
+            >
+            <a href="departments.html" class="hover:text-orange-400 duration-300 flex"
+              >Departments</a
+            >
+          </nav>
+
+          <!-- Right Actions -->
+          <div class="flex items-center gap-4">
+            <!-- User -->
+            <a
+              href="login.html"
+              class="text-gray-600 hover:text-orange-400 duration-300"
+            >
+              <i class="fa-regular fa-user"></i>
+            </a>
+
+            <!-- Dark Mode -->
+            <button class="text-gray-600 hover:text-orange-400 duration-300">
+              <i class="fa-regular fa-moon"></i>
+            </button>
+
+            <!-- Appointment Button -->
+            <a
+              href="#"
+              class="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full hover:bg-orange-400 duration-300"
+            >
+              <i class="fa-regular fa-calendar-days"></i>
+              Appointment
+            </a>
+
+            <!-- Mobile Menu -->
+            <button
+              class="md:hidden text-gray-600 hover:text-orange-400 duration-300 text-xl"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+   <section class="bg-[#f5fbfd] py-4">
+      <div class="max-w-7xl mx-auto px-5">
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <p class="text-sm text-orange-500 font-semibold">Our Doctors</p>
+          <h2 class="text-3xl font-bold text-gray-800 mt-2">
+            Our Experts <span class="text-teal-600">Our Doctors</span> For
+            <br />The Patients
+          </h2>
+        </div>
+
+        <!-- Tabs -->
+        <div
+          class="flex flex-wrap justify-center gap-6 mb-12 text-sm font-medium"
+        >
+          <button class="text-orange-500 border-b-2 border-orange-500 pb-1">
+            Orthopaedics
+          </button>
+          <button class="text-gray-500 hover:text-orange-500">Dental</button>
+          <button class="text-gray-500 hover:text-orange-500">Medicine</button>
+          <button class="text-gray-500 hover:text-orange-500">
+            Liver Surgeon
+          </button>
+          <button class="text-gray-500 hover:text-orange-500">
+            Child Specialist
+          </button>
+          <button class="text-gray-500 hover:text-orange-500">Others</button>
+        </div>
+
+        <!-- Doctors Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card -->
+          <div class="bg-white rounded-2xl shadow-sm p-4 text-center">
+            <img
+              src="https://i.pravatar.cc/300?img=12"
+              class="rounded-xl mb-4"
+              alt="Doctor"
+            />
+            <h4 class="font-semibold text-gray-800">Dr. Arvinda Arjun Shek</h4>
+            <p class="text-xs text-gray-500 mt-1">MBBS, DNB, DTCD, PhD</p>
+            <div class="flex justify-between text-xs mt-4 px-2">
+              <a href="#" class="text-teal-600 font-medium">Availability</a>
+              <a href="#" class="text-orange-500 font-medium">Book Today</a>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="bg-white rounded-2xl shadow-sm p-4 text-center">
+            <img
+              src="https://i.pravatar.cc/300?img=32"
+              class="rounded-xl mb-4"
+              alt="Doctor"
+            />
+            <h4 class="font-semibold text-gray-800">Dr. Scott Graham</h4>
+            <p class="text-xs text-gray-500 mt-1">MBBS, DMD, PhD</p>
+            <div class="flex justify-between text-xs mt-4 px-2">
+              <a href="#" class="text-teal-600 font-medium">Availability</a>
+              <a href="#" class="text-orange-500 font-medium">Book Today</a>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="bg-white rounded-2xl shadow-sm p-4 text-center">
+            <img
+              src="https://i.pravatar.cc/300?img=45"
+              class="rounded-xl mb-4"
+              alt="Doctor"
+            />
+            <h4 class="font-semibold text-gray-800">Dr. Brenton Ottinger</h4>
+            <p class="text-xs text-gray-500 mt-1">MBBS, MD, FRCP</p>
+            <div class="flex justify-between text-xs mt-4 px-2">
+              <a href="#" class="text-teal-600 font-medium">Availability</a>
+              <a href="#" class="text-orange-500 font-medium">Book Today</a>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div class="bg-white rounded-2xl shadow-sm p-4 text-center">
+            <img
+              src="https://i.pravatar.cc/300?img=64"
+              class="rounded-xl mb-4"
+              alt="Doctor"
+            />
+            <h4 class="font-semibold text-gray-800">Dr. Arvinda Arjun Shek</h4>
+            <p class="text-xs text-gray-500 mt-1">MBBS, DNB, DTCD</p>
+            <div class="flex justify-between text-xs mt-4 px-2">
+              <a href="#" class="text-teal-600 font-medium">Availability</a>
+              <a href="#" class="text-orange-500 font-medium">Book Today</a>
+            </div>
+          </div>
+        </div>
+
+        <!--  Button -->
+        <div class="text-center mt-12">
+          <button
+            class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full text-sm font-medium"
+          >
+            More Doctors →
+          </button>
+        </div>
+      </div>
+    </section>
+
+<!-- FOOTER -->
+    <section
+      class="bg-gradient-to-r from-[#0f766e] to-[#134e4a] text-white pt-14"
+    >
+      <div class="max-w-7xl mx-auto px-5">
+        <!-- Top Info -->
+        <div class="grid md:grid-cols-3 gap-6 mb-14">
+          <div class="bg-white text-gray-800 rounded-xl p-6">
+            <h4 class="font-semibold mb-2">Doctors Timetable</h4>
+            <p class="text-sm text-gray-500 mb-3">
+              View doctors availability and book your appointment.
+            </p>
+            <a href="#" class="text-orange-500 text-sm font-medium">
+              View Timetable →
+            </a>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-xl p-6">
+            <h4 class="font-semibold mb-2">Our Benefits</h4>
+            <ul class="text-sm text-gray-500 space-y-2">
+              <li>✔ World class treatment</li>
+              <li>✔ Save time & money</li>
+              <li>✔ Feel like home services</li>
+            </ul>
+          </div>
+
+          <div class="bg-white text-gray-800 rounded-xl p-6">
+            <h4 class="font-semibold mb-2">Working Hours</h4>
+            <p class="text-sm text-gray-500">Monday – Friday: 08:00 - 18:00</p>
+            <p class="text-sm text-gray-500">Sunday: Closed</p>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+      <footer>
+          <div
+          class="border-t border-white/20 py-6 flex flex-col md:flex-row justify-between text-sm"
+        >
+          <p>© Hospital Automanager. All Rights Reserved.</p>
+          <div class="flex gap-4">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </footer>
+      </div>
+    </section>
+</body>
+</html>
